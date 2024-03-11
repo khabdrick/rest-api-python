@@ -1,35 +1,3 @@
-# import os
-# from dotenv import load_dotenv
-# import json
-# import requests
-
-# # Load environment variables from .env file
-# load_dotenv()
-
-# # Retrieve environment variables
-# username = os.getenv("USERNAME_LT")
-# access_token = os.getenv("ACCESS_TOKEN")
-
-# def test_get_lambdatest_all_builds():
-#     url = "https://%s:%s@api.lambdatest.com/automation/api/v1/sessions" % (username, access_token)
-#     headers = {"accept": "application/json"}
-#     response = requests.get(url, headers=headers)
-
-#     # Check if request was successful (status code 200)
-#     if response.status_code == 200:
-#         # Extract builds data from response
-#         builds_data = response.json()
-#         formatted_builds_data = json.dumps(builds_data, indent=4)  # Formatting JSON
-#         print(formatted_builds_data)
-#         return builds_data
-
-#     else:
-#         print("Failed to fetch builds. Status code:", response.status_code)
-#         print("Error Message:", response.text)
-#         return None
-    
-# builds = test_get_lambdatest_all_builds()
-
 import os
 from dotenv import load_dotenv
 import json
@@ -39,8 +7,8 @@ import requests
 load_dotenv()
 
 # Retrieve environment variables
-username = os.getenv("USERNAME_LT")
-access_token = os.getenv("ACCESS_TOKEN")
+username = os.getenv("LT_USERNAME")
+access_token = os.getenv("LT_ACCESS_TOKEN")
 
 def get_lambdatest_all_builds():
     url = "https://%s:%s@api.lambdatest.com/automation/api/v1/sessions" % (username, access_token)
