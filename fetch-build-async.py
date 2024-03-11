@@ -8,8 +8,8 @@ import asyncio
 load_dotenv()
 
 # Retrieve environment variables
-username = os.getenv("USERNAME_LT")
-access_token = os.getenv("ACCESS_TOKEN")
+username = os.getenv("LT_USERNAME")
+access_token = os.getenv("LT_ACCESS_TOKEN")
 
 async def test_get_lambdatest_all_builds():
     url = f"https://{username}:{access_token}@api.lambdatest.com/automation/api/v1/builds"
