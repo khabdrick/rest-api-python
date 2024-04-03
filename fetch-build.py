@@ -11,7 +11,7 @@ username = os.getenv("LT_USERNAME")
 access_key = os.getenv("LT_ACCESS_KEY")
 
 def get_lambdatest_all_builds():
-    url = "https://%s:%s@api.lambdatest.com/automation/api/v1/sessions" % (username, access_token)
+    url = "https://%s:%s@api.lambdatest.com/automation/api/v1/sessions" % (username, access_key)
     headers = {"accept": "application/json"}
     response = requests.get(url, headers=headers)
 

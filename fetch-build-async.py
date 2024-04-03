@@ -12,7 +12,7 @@ username = os.getenv("LT_USERNAME")
 access_key = os.getenv("LT_ACCESS_KEY")
 
 async def test_get_lambdatest_all_builds():
-    url = f"https://{username}:{access_token}@api.lambdatest.com/automation/api/v1/builds"
+    url = f"https://{username}:{access_key}@api.lambdatest.com/automation/api/v1/builds"
     headers = {"accept": "application/json"}
     async with aiohttp.ClientSession() as session:
         async with session.get(url, headers=headers) as response:
