@@ -9,8 +9,8 @@ pip install python-dotenv
 After installations create the environment variables in `.env` file and populate with you LambdaTest details.
 ```
 # .env
-USERNAME_LT=your_username
-ACCESS_TOKEN=your_access_key
+LT_USERNAME=your_username
+LT_ACCESS_KEY=your_access_key
 ```
 You can benchmark the code files and you will see that the async version runs faster. For benchmarking (over a certain number of runs), we will use [hyperfine](https://github.com/sharkdp/hyperfine). Installation of hyperfine can be found in the [docs](https://github.com/sharkdp/hyperfine/blob/master/README.md#installation).
 Benchmark by running the following command:
