@@ -8,7 +8,7 @@ load_dotenv()
 
 # Retrieve environment variables
 username = os.getenv("LT_USERNAME")
-access_token = os.getenv("LT_ACCESS_TOKEN")
+access_key = os.getenv("LT_ACCESS_KEY")
 
 def get_lambdatest_all_builds():
     url = "https://%s:%s@api.lambdatest.com/automation/api/v1/sessions" % (username, access_token)
